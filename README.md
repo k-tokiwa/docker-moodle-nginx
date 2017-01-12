@@ -14,7 +14,7 @@ To spawn a new instance of Moodle:
 
 ```
 docker run -d --name DB -p 3306:3306 -e MYSQL_DATABASE=moodle -e MYSQL_USER=moodle -e MYSQL_PASSWORD=moodle centurylink/mysql
-docker run -d -P --name moodle --link DB:DB -e MOODLE_URL=https://sample.com -p 8080:80 k-tokiwa/moodle
+docker run -d -P --name moodle --link DB:DB -e MOODLE_URL=https://sample.com -p 8080:80 tockeydocker/docker-moodle-nginx
 ```
 
 You can visit the following URL in a browser to get started:
