@@ -1,5 +1,5 @@
 # Dockerfile for moodle instance. more dockerish version of https://github.com/sergiogomez/docker-moodle
-FROM CENTOS7
+FROM centos:7
 MAINTAINER tokiwa
 
 VOLUME ["/var/moodledata"]
