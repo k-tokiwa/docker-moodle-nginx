@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-git clone https://github.com/jda/docker-moodle
+git clone https://github.com/k-tokiwa/docker-moodle-nginx
 cd docker-moodle
 docker build -t moodle .
 ```
