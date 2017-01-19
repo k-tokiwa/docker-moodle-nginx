@@ -25,7 +25,7 @@ location / {
     proxy_set_header   Host              $http_host;
     proxy_set_header   X-Real-IP         $remote_addr;
     proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
-    proxy_set_header   Host https://moodle.mgmt.siiser.com;
+    proxy_set_header   Host https://example.com;
     proxy_redirect     off;
 }
 ```
