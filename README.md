@@ -1,28 +1,22 @@
-# docker-moodle-nginx
-
 ## Installation
-
 ```
-git clone https://github.com/k-tokiwa/docker-moodle-nginx
-cd docker-moodle
+git clone -b feature-moodle-docker https://github.com/ricoh/si-apps-ex.git 
 docker build -t moodle .
 ```
 
 ## Usage
-
-To spawn a new instance of Moodle:
+To spawn a new instance of Moodle:https://https://example.com
 
 ```
 docker run -d --name DB -p 3306:3306 -e MYSQL_DATABASE=moodle -e MYSQL_USER=moodle -e MYSQL_PASSWORD=moodle centurylink/mysql
-docker run -d -P --name moodle --link DB:DB -e MOODLE_URL=https://FrontDNS.com -p 8080:80 k-tokiwa/moodle
+docker run -d -P --name moodle --link DB:DB -e MOODLE_URL=https://example.com -p 8080:80 k-tokiwa/moodle
 ```
 
 You can visit the following URL in a browser to get started:
 
-```
-https://sample.com
-```
-## Nginx
+## Nginx setting
+
+/etc/nginx/nginx.conf
 ```
 location / {
     proxy_pass http://PrivateIP:8080;
@@ -31,7 +25,12 @@ location / {
     proxy_set_header   Host              $http_host;
     proxy_set_header   X-Real-IP         $remote_addr;
     proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
-    proxy_set_header   Host https://FrontDNS.com;
+    proxy_set_header   Host https://moodle.mgmt.siiser.com;
     proxy_redirect     off;
 }
+```
+
+### URL
+```
+https://example.com
 ```
