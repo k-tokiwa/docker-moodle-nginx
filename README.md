@@ -5,7 +5,7 @@ docker build -t moodle .
 ```
 
 ## Usage
-To spawn a new instance of Moodle:https://example.com
+To spawn a new instance of Moodle:
 
 ```
 docker run -d --name DB -p 3306:3306 -e MYSQL_DATABASE=moodle -e MYSQL_USER=moodle -e MYSQL_PASSWORD=moodle centurylink/mysql
