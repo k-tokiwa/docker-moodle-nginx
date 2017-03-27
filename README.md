@@ -1,6 +1,6 @@
 ## Installation
 ```
-git clone -b feature-moodle-docker https://github.com/ricoh/si-apps-ex.git 
+git clone -b feature-moodle-docker https://github.com/k-tokiwa/moodle-nginx.git 
 docker build -t moodle .
 ```
 
