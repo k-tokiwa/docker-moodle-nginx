@@ -1,11 +1,12 @@
 version: '2'
 services:
   moodle:
-    image: jhardison/moodle
+    image: k-tokiwa/moodle-nginx
     links:
       - moodle_db
     environment:
-      MOODLE_URL: "http://0.0.0.0:8080"
+    # MOODLE_URL change. 
+      MOODLE_URL: "https://0.0.0.0:8080"
       DB_PORT_3306_TCP_ADDR: moodle_db
       DB_ENV_MYSQL_USER: moodle
       DB_ENV_MYSQL_PASSWORD: moodle
